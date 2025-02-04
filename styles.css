@@ -2,5 +2,10 @@ body{
   padding: 25px;
 }
 .title {
-	color: #5C6AC4;
+  text-align: center;
+  margin-top: 125px;
+	background-image: linear-gradient(to right, red, yellow);
+  -webkit-background-clip: text;
+  color: transparent;
+	font-size: 65px;
 }
