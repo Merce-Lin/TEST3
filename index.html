@@ -3,12 +3,20 @@
   <head>
     <title>Game On!</title>
     <link rel="stylesheet" href="styles.css" />
+    
   </head>
   <body>
+    <div class="titleborder">
       <h1 class="title">Game On!</h1>
-      <div class="mountain"></div>
-      <div class="sun"></div>
-      <div class="cloud"></div>
-      <div class="lake"></div>
+      <button class="btn" id="create">Create</button>
+      <button class="btn" id="load">Load</button>
+    </div>
+    <script src="./script.js"></script>
+    <div class="popup" id="popup">
+      <h2 class="Name">Enter Character Name: </h2>
+      <input id="charactername" type="text" placeholder="Enter Name"></input
+      <button class="btn-pop" id="cancel">Cancel</button>
+      <button class="btn-pop" id="submit">Submit</button>
+    </div>
   </body>
 </html>
