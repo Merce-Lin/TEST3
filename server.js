@@ -9,8 +9,8 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect("mongodb+srv://Merci:GameOn@gameon.xxqwr.mongodb.net/");
-
+mongoose.connect("mongodb://Merci:GameOn@gameon-shard-00-00.xxqwr.mongodb.net:27017,gameon-shard-00-01.xxqwr.mongodb.net:27017,gameon-shard-00-02.xxqwr.mongodb.net:27017/characters?replicaSet=atlas-11lxty-shard-0&ssl=true");
+        
 // Define Mongoose Schema
 const CharacterSchema = new mongoose.Schema({
   name: { type: String, required: true },
