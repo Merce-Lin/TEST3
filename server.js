@@ -9,10 +9,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect("mongodb+srv://Merci:GameOn@gameon.xxqwr.mongodb.net/mydatabase", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect("mongodb+srv://Merci:GameOn@gameon.xxqwr.mongodb.net/");
 
 // Define Mongoose Schema
 const CharacterSchema = new mongoose.Schema({
