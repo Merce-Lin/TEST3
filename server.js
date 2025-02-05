@@ -14,6 +14,7 @@ mongoose.connect("mongodb+srv://Merci:GameOn@gameon.xxqwr.mongodb.net/characters
 // Define Mongoose Schema
 const CharacterSchema = new mongoose.Schema({
   name: { type: String, required: true },
+  gold: { type: Number, required: true },      
 });
 
 const Character = mongoose.model("Character", CharacterSchema);
@@ -21,10 +22,10 @@ const Character = mongoose.model("Character", CharacterSchema);
 // API Endpoint to Create Character
 app.post("/api/characters", async (req, res) => {
   try {
-    const { name } = req.body;
+    const { name, gold } = req.body;
     if (!name) return res.status(400).json({ message: "Name is required" });
 
-    const newCharacter = new Character({ name });
+    const newCharacter = new Character({ name, gold });
     await newCharacter.save();
 
     res.status(201).json({ message: "Character created successfully", character: newCharacter });
