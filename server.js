@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect("mongodb+srv://Merci:GameOn@gameon.xxqwr.mongodb.net/GameOnDB?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://Merci:GameOn@gameon.xxqwr.mongodb.net/characters?retryWrites=true&w=majority");
 
 // Define Mongoose Schema
 const CharacterSchema = new mongoose.Schema({
@@ -34,5 +34,6 @@ app.post("/api/characters", async (req, res) => {
 });
 
 // Start the Server
-const PORT = 5000;
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
