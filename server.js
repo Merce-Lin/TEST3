@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect("mongodb+srv://Merci:GameOn@gameon.xxqwr.mongodb.net/characters?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://Merci:GameOn@gameon.xxqwr.mongodb.net/GameOnDB?retryWrites=true&w=majority");
 
 // Define Mongoose Schema
 const CharacterSchema = new mongoose.Schema({
