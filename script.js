@@ -24,7 +24,7 @@ SubmitButton.onclick = async function() {
   }
 
   try {
-    const response = await fetch("http://localhost:5000/api/characters", {
+    const response = await fetch("https://test3-vngm.onrender.com/api/characters", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
